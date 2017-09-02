@@ -1,1 +1,22 @@
-<input type="text" placeholder="Hola pinche putita">
+<div class="row">
+  <div class="col-md-6">
+    <h1>*ngIf</h1>
+    <hr>
+    <button type="button" (click)="showCars=!showCars" class="btn btn-outline-primary">Mostrar/Ocultar</button>    
+    <br><br>
+    <div *ngIf="showCars" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+      <div class="card-header">{{ data.category }}</div>
+      <div class="card-body">
+        <h4 class="card-title">{{ data.title }}</h4>
+        <p class="card-text">{{ data.description }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h1>*ngFor</h1>
+    <hr>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let car of cars; let i = index">{{ i+1 }}. {{ car }}</li>
+    </ul>
+  </div>
+</div>
