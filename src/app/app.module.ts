@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 // Routes 
 import { APP_ROUTING } from './app.routes';
+
 // Services 
+import { HeroesService } from './services/heroes.service';
 
 //Components
 import { AppComponent } from './app.component';
 import { AppHeader, AppFooter, 
          AppHome, AboutComponent, 
-         HeroesComponent } from './components/index.components';
+         HeroesComponent, HeroComponent } from './components/index.components';
 
 
 @NgModule({
@@ -19,14 +21,17 @@ import { AppHeader, AppFooter,
     AppFooter,
     AppHome,
     AboutComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTING
     
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
