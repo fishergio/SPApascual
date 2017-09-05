@@ -11,7 +11,7 @@ import { HeroesService } from './services/heroes.service';
 import { AppComponent } from './app.component';
 import { AppHeader, AppFooter, 
          AppHome, AboutComponent, 
-         HeroesComponent, HeroComponent } from './components/index.components';
+         HeroesComponent, HeroComponent, SearchHeroComponent } from './components/index.components';
 
 
 @NgModule({
@@ -22,7 +22,8 @@ import { AppHeader, AppFooter,
     AppHome,
     AboutComponent,
     HeroesComponent,
-    HeroComponent
+    HeroComponent,
+    SearchHeroComponent,
   ],
   imports: [
     BrowserModule,
